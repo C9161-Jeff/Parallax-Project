@@ -1,0 +1,130 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    font-size:1rem;
+    font-family:"Lato",sans-serif ;
+    color: #666;
+    line-height: 1.8rem;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.background--image1{
+    background-image: url(./images/bg.jpg); /*parallax şart//1*/
+    min-height: 100%;/*parallax şart//2*/
+}
+
+.background--image2{
+    background-image: url(./images/bg2.jpg);
+    min-height: 79%; 
+    /* 2.resim gelirken güzel bir etki oluştursun diye 80 verdik*/
+   
+}
+.background--image3{
+    background-image: url(./images/bg3.jpg);
+    min-height: 80%; 
+    /* 3.resim gelirken güzel bir etki oluştursun diye 80 verdik */
+}
+.background--image4{
+    background-image: url(./images/bg4.jpg);
+    min-height: 80%; 
+    /* 4.resim gelirken güzel bir etki oluştursun diye 80 verdik */
+}
+
+
+.background--image1,
+.background--image2,
+.background--image3,
+.background--image4{
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    /* resmi endüzgün biçimde konumlandırma ve boyutlandırma amaçlı */
+    background-repeat: no-repeat;
+    /* resmin küçük olursa sürekli tekrar koymaması için */
+    /* TODO PARALLAX EFEKTİ */
+    background-attachment: fixed;
+
+}
+
+.heading-container{
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    color: black;
+    position: absolute;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    
+}
+.heading-container__heading{
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    border-top-left-radius: 2rem ;
+    border-bottom-right-radius: 2rem;
+    /* border-radius: 2rem 0 2rem 0;yaparsam aynı işlemi yaparım */
+    outline: 0.5rem inset purple ;
+    outline-offset: 1rem;
+    line-height: 5rem;
+}
+.heading-container__logo{
+    width: 30%;
+    opacity: 1;
+
+}
+.heading-container__text{
+    background-color: black;
+    color: white;
+    padding: 0.7rem;
+    line-height: 4rem;
+    border-radius:0.7rem 0 0.7rem 0 ;
+    outline: 0.4rem inset purple;
+    outline-offset: 0.2rem;
+    text-transform: capitalize;
+}
+.section{
+    text-align: center;
+    padding: 3rem 5rem;
+    
+}
+
+.section--light{
+    background-color: rgb(241,241,241);
+    color: #666;
+}
+.section--dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+@media(max-width:760px)   {
+    .heading-container{
+        font-size: 1.5rem;
+        letter-spacing: 0.5rem;}
+  
+    .heading-container__heading{
+    padding: 0.8rem;
+    border-top-left-radius: 1rem ;
+    border-bottom-right-radius: 1rem;
+    outline: 0.5rem inset purple ;
+    outline-offset: 0.3rem;
+    line-height: 2.4rem;}
+
+    .heading-container__text{
+    padding: 0.4rem;
+    line-height: 2.5rem;
+    border-radius:0.3rem 0 0.3rem 0 ;
+    outline: 0.2rem inset purple;
+    outline-offset: 0.2rem;}  
+    
+    .section{
+    padding: 1.5rem 2rem;
+    width: 70%;
+}
+    
+    .heading-container__logo{
+    width: 50%;}
+}
